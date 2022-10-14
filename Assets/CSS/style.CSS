@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+}
+
+body {
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    padding: 0 1.5em;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0 0 20px 0 white;
+    border-radius: 20px;
+}
+
+.card .conteiner-form {
+    padding: 1em;
+}
+
+.conteiner-form h1{
+    text-align: center;
+}
+
+.conteiner-form form p {
+    margin: 0;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+
+.conteiner-form form input,
+.conteiner-form form textarea {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: white;
+    border-bottom: 2px solid aqua;
+}
+
+.conteiner-form form h2{
+    text-align: center;
+}
+.container-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.conteiner-form form .button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+.result ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    list-style: none;
+}
+.result ul li .resultado{
+    width: 200px;
+    height: 45px;
+    padding: 1em;
+    border: none;
+    background: none;
+    outline: 0;
+    border-bottom: 2px solid aqua;
+    color: white;
+}
+/*Botones*/
+.bn5 {
+    padding: 1em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #000000;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.bn5:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #00ffd5);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.bn5:active {
+    color: #000000;
+}
+
+.bn5:active:after {
+    background: transparent;
+}
+
+.bn5:hover:before {
+    opacity: 1;
+}
+
+.bn5:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+/*Boton de limpiar*/
+.bn54 {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 45px;
+    width: 130px;
+    opacity: 1;
+    background-color: #000000;
+    border: none;
+    box-shadow: 0 0 20px 0 white;
+}
+
+.bn54 .bn54span {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+.bn54:hover {
+    animation: bn54rotate 0.7s ease-in-out both;
+}
+
+.bn54:hover .bn54span {
+    animation: bn54storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes bn54rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bn54storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
