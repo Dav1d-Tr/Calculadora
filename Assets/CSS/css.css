@@ -1,22 +1,19 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Acme', sans-serif;
-}
-
-.calculator{
-    background-image: linear-gradient( 179deg,  rgba(7,62,137,1) 31%, rgba(13,79,170,1) 80.2% );
-    display: flex;
+body {
+    display: flexbox;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    background:#302b63;
     color: #ffffff;
+    padding: 0 1.5em;
 }
 
 .container {
-    padding: 2em;
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .card {
@@ -27,12 +24,11 @@
 }
 
 .card .conteiner-form {
-    padding: 2em;
+    padding: 1em;
 }
 
 .conteiner-form h1{
     text-align: center;
-    font-size: 3em;
 }
 
 .conteiner-form form p {
@@ -55,8 +51,6 @@
 
 .conteiner-form form h2{
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 10px
 }
 .container-img img {
     width: 100%;
@@ -241,25 +235,29 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .calculator{
+@media screen and (max-width:768px){
+    body {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vw;
-        height: 100vh;
+        background:#302b63;
         color: #ffffff;
+        padding: 1em;
+        width: 100%;
     }
     
     .container {
-        padding: 1em;
+        padding: 0;
         height: 100%;
+        width: 100%;
+        align-items: center;
     }
     
     .card {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        box-shadow: 0 0 10px 0 white;
+        grid-template-columns: 1fr;
+        flex-direction: column-reverse;
+        box-shadow: 0 0 20px 0 white;
         border-radius: 20px;
     }
     
@@ -269,7 +267,6 @@
     
     .conteiner-form h1{
         text-align: center;
-        font-size: 2em;
     }
     
     .conteiner-form form p {
@@ -278,9 +275,10 @@
         text-transform: uppercase;
     }
     
+    
     .conteiner-form form input,
     .conteiner-form form textarea {
-        width: 60%;
+        width: 50%;
         padding: 1em;
         border: none;
         background: none;
@@ -291,29 +289,15 @@
     
     .conteiner-form form h2{
         text-align: center;
-        font-size: 1em;
-        margin-bottom: 5px
     }
-
-    .container-img{
-        height: 120px;
-    }
-
     .container-img img {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 20px;
+        display: none;
     }
-    
     .conteiner-form form .button {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 5px;
     }
-
     .result ul{
         display: flex;
         justify-content: center;
@@ -321,18 +305,16 @@
         column-gap: 5px;
         list-style: none;
     }
-
     .result ul li .resultado{
         width: 100px;
         height: 45px;
-        padding: 1em;
+        padding: 0;
         border: none;
         background: none;
         outline: 0;
         border-bottom: 2px solid aqua;
         color: white;
     }
-
     /*Botones*/
     .bn5 {
         padding: 1em;
@@ -406,6 +388,7 @@
         top: 0;
         border-radius: 10px;
     }
+    
     
     /*Boton de limpiar*/
     .bn54 {

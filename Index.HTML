@@ -10,48 +10,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="icon" href="./Assets/IMG/png-clipart-app-store-calculator-android-multiplication-electronics-calculator-PhotoRoom.png-PhotoRoom.png"
+        type="image/x-icon">
 </head>
-
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="conteiner-form">
-                <h1>CALCULADORA</h1>
-                <form id="formulario">
-                    <p>
-                        <label for="first_value" class="form_label">Número 1</label>
-                        <input type="number" id="first_value" class="form_input" placeholder="">
-                    </p>
-                    <p>
-                        <label for="second_value" class="form_label">Número 2</label>
-                        <input type="number" id="second_value" class="form_input" placeholder="">
-                    </p>
-                    <p class="button">
-                        <button type="button" class="bn5" onclick="suma()">Sumar</button>
-                        <button type="button" class="bn5" onclick="resta()">Restar</button>
-                    </p>
-                    <p class="button">
-                        <button type="button" class="bn5" onclick="multiplicacion()">Multiplicar</button>
-                        <button type="button" class="bn5" onclick="division()">Dividir</button>
-                    <div>
-                        <h2>RESULTADO</h2>
-                        <div class="result">
-                            <ul>
-                                <li>
-                                    <button class="resultado" id="resultado"></button>
-                                </li>
-                                <li>
-                                    <button class="bn54" onclick="Limpiar()">
-                                        <span class="bn54span">Limpiar</span>
-                                    </button>
-                                </li>
-                            </ul>
+    <div class="calculator">
+        <div class="container">
+            <div class="card">
+                <div class="conteiner-form">
+                    <h1>CALCULADORA</h1>
+                    <form id="formulario">
+                        <p>
+                            <label for="first_value" class="form_label">Número 1</label>
+                            <input type="number" id="first_value" class="form_input" placeholder="">
+                        </p>
+                        <p>
+                            <label for="second_value" class="form_label">Número 2</label>
+                            <input type="number" id="second_value" class="form_input" placeholder="">
+                        </p>
+                        <p class="button">
+                            <button type="button" class="bn5" onclick="suma()">Sumar</button>
+                            <button type="button" class="bn5" onclick="resta()">Restar</button>
+                        </p>
+                        <p class="button">
+                            <button type="button" class="bn5" onclick="multiplicacion()">Multiplicar</button>
+                            <button type="button" class="bn5" onclick="division()">Dividir</button>
+                        <div>
+                            <h2>RESULTADO</h2>
+                            <div class="result">
+                                <ul>
+                                    <li>
+                                        <button class="resultado" id="resultado"></button>
+                                    </li>
+                                    <li>
+                                        <button class="bn54" onclick="Limpiar()">
+                                            <span class="bn54span">Limpiar</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div class="container-img">
-                <img src="./Assets/IMG/fondo-realista-pizarra-matematicas_23-2148159831.webp" alt="Math">
+                    </form>
+                </div>
+                <div class="container-img">
+                    <img src="./Assets/IMG/16182182048646-PhotoRoom.png" alt="Math">
+                </div>
             </div>
         </div>
     </div>
