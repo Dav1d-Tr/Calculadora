@@ -4,21 +4,21 @@
 }
 
 body {
-    background: #0f0c29;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    background:#302b63;
     color: #ffffff;
     padding: 0 1.5em;
 }
 
 .container {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5em;
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .card {
@@ -103,7 +103,7 @@ body {
 .bn5:before {
     content: "";
     background: linear-gradient(45deg,
-            #00ffd5,
+    #00ffd5,
             #002bff,
             #7a00ff,
             #ff00c8,
@@ -126,11 +126,11 @@ body {
     0% {
         background-position: 0 0;
     }
-
+    
     50% {
         background-position: 400% 0;
     }
-
+    
     100% {
         background-position: 0 0;
     }
@@ -200,7 +200,7 @@ body {
     0% {
         transform: rotate(0deg) translate3d(0, 0, 0);
     }
-
+    
     25% {
         transform: rotate(3deg) translate3d(0, 0, 0);
     }
@@ -212,7 +212,7 @@ body {
     75% {
         transform: rotate(1deg) translate3d(0, 0, 0);
     }
-
+    
     100% {
         transform: rotate(0deg) translate3d(0, 0, 0);
     }
@@ -226,11 +226,11 @@ body {
     25% {
         transform: translate3d(4px, 0, 0) translateZ(0);
     }
-
+    
     50% {
         transform: translate3d(-3px, 0, 0) translateZ(0);
     }
-
+    
     75% {
         transform: translate3d(2px, 0, 0) translateZ(0);
     }
@@ -239,3 +239,4 @@ body {
         transform: translate3d(0, 0, 0) translateZ(0);
     }
 }
+
